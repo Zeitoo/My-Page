@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <style>
+        .dropdown {
+            text-align: center;
+            display: inline-block;
+            width: 100px;
+            
+        }
+        .dropdown:hover .values{
+            height: 80px;
+        }
+
+        .values {
+            transition: all .3s ease-in;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <h2>LANG</h2>
+        <div class="values">
+            <p>PT</p>
+            <p>EN</p>
+        </div>
+    </div>
+</body>
+</html>
