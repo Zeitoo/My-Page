@@ -1,11 +1,12 @@
 /* Main Header styles ... */
 
 body {
+
     transition: background-color .3s ease-in;
 }
 
 header {
-     padding: 20px;
+     padding: 20px 0;
      font-size: 0.85em;
      color: var(--text-color);
      display: flex;
@@ -56,6 +57,7 @@ header .extras button {
 body.dark {
     background-color: rgb(22, 22, 22);
     --text-color :  rgb(228, 228, 228);
+    color: var(--text-color);
 }
 
 body.dark .color-mode {
@@ -65,3 +67,51 @@ body.dark .color-mode {
 }
 
 /* Main content styles ...*/
+
+@keyframes nome {
+     to {
+          letter-spacing: 0.2em;
+     }
+}
+
+
+main {
+     padding-top: 60px;
+}
+
+main h1 {
+     /*animation: nome 1s forwards 1;*/
+     letter-spacing: 2em;
+     letter-spacing: 0.2em;
+     font-size: 2em;
+}
+
+main .first-section {
+     display: flex;
+     justify-content: space-between;
+}
+
+main .first-section .text-content {
+     display: flex;
+          flex-direction: column;
+          row-gap: 25px;
+     width: 470px;
+}
+
+main .first-section .text-content .profile *{
+     margin: 5px 0;
+}
+
+
+main .first-section .text-content .description {
+     word-spacing: 0.3em;
+     letter-spacing: 1px;
+}
+
+main .first-section .image-content img{
+     width: 200px;
+     border-radius: 20px;
+}
+
+
+/*Second Section */

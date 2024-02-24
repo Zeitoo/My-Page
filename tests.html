@@ -6,32 +6,35 @@
     <title>Dropdown</title>
 
     <style>
-        .dropdown {
-            text-align: center;
+
+
+        .container {
+            padding: 20px;
+            translate: 100px 10px;
             display: inline-block;
-            width: 100px;
+        }
+
+        .text {
+            font-size: 3em;
+            --letters : 12;
+
+            text-overflow: hidden;
+            overflow: hidden;
+            text-wrap: nowrap;
+            border-bottom: 1px solid black;
             
         }
-        .dropdown:hover .values{
-            height: 80px;
-        }
 
-        .values {
-            transition: all .3s ease-in;
-            height: 0px;
-            overflow: hidden;
-        }
-
+       
 
     </style>
 </head>
 <body>
-    <div class="dropdown">
-        <h2>LANG</h2>
-        <div class="values">
-            <p>PT</p>
-            <p>EN</p>
-        </div>
+
+    <div class="container">
+        <p class="text animated-out">Jose Zimbico.</p>
     </div>
+
+
 </body>
 </html>
