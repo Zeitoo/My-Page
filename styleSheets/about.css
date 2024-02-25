@@ -1,0 +1,59 @@
+body.dark {
+    background-color: rgb(22, 22, 22);
+    --text-color: rgb(228, 228, 228);
+    color: var(--text-color);
+}
+
+body.dark .color-mode {
+    filter: invert(1);
+    background-image: url(../assets/icons/sun.svg);
+}
+
+main {
+    padding: 50px 0 70px;
+}
+
+.gallery {
+    border-radius: 10px;
+    margin: 40px 0;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    column-gap: 10px;
+}
+
+img {
+    width: 300px;
+}
+
+.text-content {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.knowlodge-list {
+    translate: 30px;
+}
+
+.email {
+    background-image: linear-gradient(90deg, rgb(0, 89, 255), rgb(255, 0, 200),  rgb(0, 217, 255));
+    background-clip: text;
+    color: transparent;
+    font-size: 2em;
+}
+

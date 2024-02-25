@@ -65,21 +65,25 @@ body.dark .color-mode {
 }
 
 /* Main content styles ...*/
+body.dark main h1 {
+     filter: brightness(1.5);
+}
+
 
 main {
-     padding-top: 60px;
+     
      color: var(--text-color);
 }
 
 main h1 {
-     color: black;
-     /*animation: nome 1s forwards 1;*/
+     filter: brightness(0.1);
      letter-spacing: 2em;
      letter-spacing: 0.2em;
      font-size: 2em;
 }
 
 main .first-section {
+     margin: 100px 0 10px;
      display: flex;
      justify-content: space-between;
 }
@@ -107,68 +111,160 @@ main .first-section .image-content img {
 
 /*Second Section */
 main .second-section {
-     margin-top: 100px;
-     margin-bottom: 50px;
+     margin: 150px 0 50px;
 }
 
 main .second-section .text-content {
      display: flex;
      flex-direction: column;
      row-gap: 20px;
-
-     margin-bottom: 29px;
+     line-height: 1.5em;
+     margin: 80px 0 40px;
 }
-
-main .second-section .habilities-wrapper {
+main .second-section .habilidades {
      display: flex;
-          justify-content: space-between;
-          align-items: center;
+     align-items: center;
 }
 
-main .second-section .habilities-wrapper .habilities {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     column-gap: 10px;
-     row-gap: 5px;
-}
-main .second-section .habilities-wrapper .habilities > * {
-     transition: background-color .2s ease-in;
-     display: flex;
-          column-gap: 10px;
-          align-items: center;
-
-     border: 1px solid rgba(0, 0, 0, 0.212);
-     width: 100%;
-     padding: 10px 25px;
-     border-radius: 5px;
+@keyframes rotate {
+     from {
+          rotate: -5deg;
+     }
+     to {
+          rotate: 5deg;
+     }
 }
 
-main .second-section .habilities-wrapper .habilities > *:hover {
-     background-color: rgba(128, 128, 128, 0.26);
+@keyframes iconMove {
+     0% {
+          translate: 5px 10px;
+     }
+     33% {
+          translate: -5px 0px;
+     }
+     66% {
+          translate: 0px -10px;
+     }
+     100% {
+          translate: 7px 0px;
+     }
 }
 
-body.dark main .second-section .habilities-wrapper .habilities > *{
-     background-color: rgba(0, 0, 0, 0.445);
-}
- 
-body.dark main .second-section .habilities-wrapper .habilities > *:hover {
-     background-color: rgb(30, 39, 44);
+@keyframes move {
+     50% {
+          translate: 0 20px;
+     }
 }
 
-main .second-section .habilities-wrapper .habilities h3 {
-     font-weight: 400;
-     font-size: 0.9em;
+main .second-section .habilidades .icons-wrapper {
+     animation: 8s linear 0s infinite alternate rotate,
+     10s linear 0s infinite alternate move;
+     position: relative;
+     width: 380px;
+     height: 290px;
 }
-main .second-section .habilities-wrapper .habilities img {
+
+main .second-section .habilidades .icons-wrapper img {
      width: 40px;
 }
 
-main .second-section .habilities-wrapper .gif-wrapper img {
-     width: 400px;
+
+main .second-section .habilidades .icons-wrapper > * {
+     animation: 5s linear var(--delay) infinite alternate iconMove;
+     position: absolute;
 }
 
-footer *{
-     margin: 10px 0;
-     font-size: 0.8em;
-     text-align: center;
+main .second-section .habilidades .icons-wrapper > *:nth-child(1) {
+     top: 100px;
+     left: 20px;
+     --delay: 1s;
 }
+main .second-section .habilidades .icons-wrapper > *:nth-child(2) {
+     top: 100px;
+     left: 320px;
+     --delay: 0.5s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(3) {
+     top: 80px;
+     left: 220px;
+     --delay: 2s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(4) {
+     top: 170px;
+     left: 170px;
+     --delay: 2.8s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(5) {
+     top: 200px;
+     left: 10px;
+     --delay: 5s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(6) {
+     top: 80px;
+     left: 100px;
+     --delay: 3.4s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(7) {
+     top: 20px;
+     left: 290px;
+     --delay: 0.1s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(8) {
+     top: 20px;
+     left: 150px;
+     --delay: 4s;
+}
+main .second-section .habilidades .icons-wrapper > *:nth-child(9) {
+     top: 200px;
+     left: 310px;
+     --delay: 6s;
+}
+
+main .second-section .habilidades .icons-wrapper > *:nth-child(10) {
+     top: 10px;
+     left: 10px;
+     --delay: 7s;
+}
+
+main .second-section .habilidades .gif-wrapper img {
+     width: 360px;
+     border-radius: 10px;
+     translate: 30px;
+}
+
+main .third-section {
+     display: flex;
+          flex-direction: column;
+          row-gap: 50px;
+     margin: 50px 0;
+     border: 1px soid white;
+}
+
+main .third-section header {
+     padding: 10px;
+}
+
+main .third-section header a {
+     font-size: 1.1em;
+     padding: 8px 15px;
+     border-radius: 99999px;
+     border: 1px solid white;
+}
+
+main .third-section .projects-wrapper {
+     display: grid;
+     justify-content: center;
+     grid-template-columns: 1fr 1fr;
+}
+
+main .third-section .projects-wrapper > * {
+     height: 400px;
+     width: 320px;
+     margin: 0 auto;
+     border: 1px solid white;
+}
+
+
+footer {
+}
+
